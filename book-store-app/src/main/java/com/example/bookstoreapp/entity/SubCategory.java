@@ -7,18 +7,19 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import lombok.Data;
 
-@Entity
+
 @Data
+@Entity
 public class SubCategory{
 
     @Id
     private Long sub_id;
     private String subCategoryName;
-    private String opionDesc;
+    private String optionalDesc;
     
 
     @ManyToOne
-    @JoinColumn(name="category_FK", nullable=false)
+    @JoinColumn(name="category_Id", nullable=false)
     private Category categId;
 
 
